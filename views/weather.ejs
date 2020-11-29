@@ -1,0 +1,15 @@
+<%  const temp = weatherData.main.temp; %>
+<% const weatherDesc = weatherData.weather[0].description; %>
+<% const imageURL = "http://openweathermap.org/img/wn/"+weatherData.weather[0].icon+"@2x.png" %>  
+<% const name = weatherData.name;%>  
+
+<%- include("header") -%> 
+<div class="container home">
+    <div class="container weather">
+        <div class="date"><%= date %> </div>
+    <h1>The temperature in <span style="color: rebeccapurple"><%= name %></span>: <span style="<%= temp < 5 ? 'color:blue' : 'color:red' %>"><%= temp %> &#8451</span></h1>
+        <h3>Description: <span style="color:rgb(238, 147, 215)"><%= weatherDesc %></span> <img src= "<%=imageURL%>"></h3>
+        <a class="btn btn-outline-danger" href="/">Back</a>
+    </div>
+</div>
+<%- include("footer") -%> 
