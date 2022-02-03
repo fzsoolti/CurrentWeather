@@ -20,7 +20,7 @@ app.get("/",(req,res)=>{
 //get weather from ip
 app.get("/location",(req,res)=>{
     var ipLoc = getClientIp(req);
-    var geo = geoip.lookup(ipLoc);
+    var geo = geoip.lookup(ipLoc); //get the location from ip with geoip-lite
     if (geo !== null) {
         write(req,res,geo.city);
     } else{
