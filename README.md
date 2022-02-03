@@ -1,6 +1,5 @@
 # CurrentWeather
 Express JS, EJS, Bootstrap
-
 API(openweathermap, geoIP)
 
 Current weather app to practice API communication in nodeJS(Express JS).
